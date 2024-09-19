@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>QueryApp</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+.qry {
+	display: block;
+	border: 1px solid #ababab;
+	padding: 0px 5px 5px 5px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+h3 {
+border-bottom: 1px solid #ababab;
+}
+</style>
+<body>
+
+<div class="qry">
+<h3>Join query</h3>
+<pre>
+SELECT ofr.name, ofr.DESIG, ofr.sex, ofr.MOBILE, off.OFF_NAME, off.CATEGORY
+FROM officer ofr
+INNER JOIN office off ON ofr.OFF_CODE = off.OFF_CODE
+WHERE off.CATEGORY = 'C'
+LIMIT 0 , 30
+</pre>
+</div>
+
+</body>
+</html>
